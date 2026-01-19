@@ -1,10 +1,15 @@
-n = 4114
+def check(n):
+    num = n
+    result = 0
 
-num = n 
-result = 0
+    while num > 0:
+        lastDigit = num % 10
+        result = (result * 10) + lastDigit
+        num = num // 10
 
-while n > 0 :
-    lastDigit = num % 10
-    result =( result * 10 )+ lastDigit
-    num = num // 10
-    n == result
+    if n == result:
+        print("number is palindrome")
+    else:
+        print("number is not palindrome")
+
+check(1771)
