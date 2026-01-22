@@ -61,4 +61,21 @@ if __name__ == "__main__":
     print(sol.commonFactors(885,885))
 
 
-    
+#optimal solution is this
+# from math import sqrt
+
+# class Solution:
+#     def commonFactors(self, a: int, b: int) -> int:
+#         count = 0
+#         x = min(a, b)
+
+#         for i in range(1, int(sqrt(x)) + 1):
+#             if a % i == 0 and b % i == 0:
+#                 count += 1
+#                 if i != x // i and a % (x // i) == 0 and b % (x // i) == 0:
+#                     count += 1
+#         return count
+
+# if __name__ == "__main__":
+#     sol = Solution()
+#     print(sol.commonFactors(12, 6))  # output: 4
