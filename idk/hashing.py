@@ -31,13 +31,26 @@
 #     if x in hash_map.keys():
 #         print(hash_map)
 
-s = "azyzyyszaaa"
-q = ["d","a","u","x"]
-hash_map = {}
-for x in s:
-    hash_map[x] = hash_map.get(x , 0) + 1
-print(hash_map)
+# s = "azyzyyszaaa"
+# q = ["d","a","u","x"]
+# hash_map = {}
+# for x in s:
+#     hash_map[x] = hash_map.get(x , 0) + 1
+# print(hash_map)
 
-for i in q:
-    if i in hash_map.keys():
-        print(hash_map[i])
+# for i in q:
+#     if i in hash_map.keys():
+#         print(hash_map[i])
+
+nums = [2,7,11,15]
+target = 9
+
+seen = {}
+
+for i, n in enumerate(nums):
+    need = target - n       # 9 - 2 = 7     #9-7=2
+    if need in seen:        # 7 in {}       #2 in {}
+        print(seen[need], i)                # yes    (seen[2],1)
+        break
+    seen[n] = i     # {2:0}                 #{7:0}
+print(seen)
