@@ -4,16 +4,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        result = []
-        hashmap = {}
-        for i in nums:
-            hashmap[i] = hashmap.get(i , 0)+1
+        x = 1
+        for i in range(len(nums)-1):
+            if nums[i] != nums[i +1]:
+                nums[x] = nums[i+1]
+                x += 1
+        return x
 
-        for i in hashmap.keys():
-            print(i)
-            result.append(i)
-        print(result)
-        return result
     
 if __name__ == "__main__":
     sol = Solution()
