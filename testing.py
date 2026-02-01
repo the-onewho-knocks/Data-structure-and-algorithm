@@ -10,13 +10,29 @@
 #         left += 1
 # print(nums)
 
-nums = [1, 2, 0, 3, 0, 4]
-x = 0
+# nums = [1, 2, 0, 3, 0, 4]
+# x = 0
 
-left = 0
-for right in range(len(nums)):
-    if nums[right] == x:
-        nums[right] , nums[left] = nums[left] , nums[right]
-        left += 1
+# left = 0
+# for right in range(len(nums)):
+#     if nums[right] == x:
+#         nums[right] , nums[left] = nums[left] , nums[right]
+#         left += 1
 
-print(nums)
+# print(nums)
+
+from typing import List
+
+
+s = ["h","e","l","l","o"]
+
+# class Solution:
+#     def reverseString(self, s: List[str]) -> None:
+#         """
+#         Do not return anything, modify s in-place instead.
+#           [start:stop:step]
+#         """
+k = len(s)
+first = s[1:]
+last = s[:1]
+print(last)

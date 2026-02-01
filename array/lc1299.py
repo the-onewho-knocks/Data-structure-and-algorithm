@@ -53,5 +53,5 @@ arr = [17,18,5,4,6,1]
 # print(arr)
 
 s = "hello"
-print(s[1:])
-print(s[:2])
+for i in s:
+    print(s[1:]+ s[0])
