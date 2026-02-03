@@ -21,10 +21,10 @@
 
 # print(nums)
 
-from typing import List
+# from typing import List
 
 
-s = ["h","e","l","l","o"]
+# s = ["h","e","l","l","o"]
 
 # class Solution:
 #     def reverseString(self, s: List[str]) -> None:
@@ -32,7 +32,16 @@ s = ["h","e","l","l","o"]
 #         Do not return anything, modify s in-place instead.
 #           [start:stop:step]
 #         """
-k = len(s)
-first = s[1:]
-last = s[:1]
-print(last)
+# k = len(s)
+# first = s[1:]
+# last = s[:1]
+# print(last)
+
+s = "abcdefg"
+k = 2
+print(s[1:1+k])
+result = []
+for i in range(0, len(s), k):
+    result.append(s[i:i+k])
+
+print(result)
