@@ -18,6 +18,8 @@ s ="abcdefg"
 k = 2
 l = []
 print(s[0:8])
-for i in range(0 , len(s) , 2 * k):
-    l.append( s[i : i + k])
+for i in range(0 , len(s),2):
+    l.append( [s[i : i + k]])
 print(l)
+print(l[0][0])
+print(l[0][0][0])

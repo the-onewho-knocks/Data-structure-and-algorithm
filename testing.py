@@ -37,11 +37,33 @@
 # last = s[:1]
 # print(last)
 
-s = "abcdefg"
-k = 2
-print(s[1:1+k])
-result = []
-for i in range(0, len(s), k):
-    result.append(s[i:i+k])
+# s = "abcdefg"
+# k = 2
+# print(s[1:1+k])
+# result = []
+# for i in range(0, len(s), k):
+#     result.append(s[i:i+k])
 
-print(result)
+# print(result)
+
+a = "nitinq"
+left = 0
+right = len(a)-1
+
+while right > left:
+    if a[left] != a[right]:
+        print(False)
+        break
+    left += 1
+    right -= 1
+print(True)
+
+# l = []
+# for i in reversed(a):
+#     l.append(i)
+
+# c = "".join(l)
+# if a == c:
+#     print(True)
+# else:
+#     print(False)
