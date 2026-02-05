@@ -46,17 +46,17 @@
 
 # print(result)
 
-a = "nitinq"
-left = 0
-right = len(a)-1
+# a = "nitinq"
+# left = 0
+# right = len(a)-1
 
-while right > left:
-    if a[left] != a[right]:
-        print(False)
-        break
-    left += 1
-    right -= 1
-print(True)
+# while right > left:
+#     if a[left] != a[right]:
+#         print(False)
+#         break
+#     left += 1
+#     right -= 1
+# print(True)
 
 # l = []
 # for i in reversed(a):
@@ -67,3 +67,33 @@ print(True)
 #     print(True)
 # else:
 #     print(False)
+
+# squares = [x*x for x in range(5)]
+# print(squares)
+
+# class Solution:
+#     def validPalindrome(self, s: str) -> bool:
+#         k = list(s)
+#         left = 0
+#         right = len(s)-1
+#         for i in k:
+#             if k[left] != k[right]:
+#                 k.remove(left)
+#             left += 1
+#             right -= 1
+#         a = "".join(k)
+#         return a == a[::-1]
+
+# if __name__ == "__main__":
+#     sol = Solution()
+#     print(sol.validPalindrome("abca"))
+
+s = "abca"
+k = list(s)
+#print(k)
+left = 0
+#right = len(k)-1
+for right in reversed(k):
+    if k[left] != k[right]:
+        k.remove(k[right])
+    print(k)
