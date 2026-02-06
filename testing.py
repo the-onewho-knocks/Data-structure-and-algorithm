@@ -88,12 +88,30 @@
 #     sol = Solution()
 #     print(sol.validPalindrome("abca"))
 
-s = "abca"
-k = list(s)
-#print(k)
-left = 0
-#right = len(k)-1
-for right in reversed(k):
-    if k[left] != k[right]:
-        k.remove(k[right])
-    print(k)
+# s = "cbbcc"
+# k = list(s)
+# left = 0
+# right = len(k)-1
+# while left < right:
+#     if k[left] != k[right]:
+#         k.remove(k[left])
+#     left += 1
+#     right -= 1
+# l = "".join(k)
+# if l == l[::-1]:
+#     print(True)
+# else:
+#     print(False)
+
+n = 10
+seq = [0, 1]
+    
+    # We use a loop to calculate the rest
+    # We start from '2' because we already have index 0 and 1
+for i in range(2, n):
+        # Add the last two numbers together
+    next_number = seq[i-1] + seq[i-2]
+        # Put the new number at the end of our list
+    print(next_number)
+    seq.append(next_number)
+#print(seq)
