@@ -103,15 +103,15 @@
 # else:
 #     print(False)
 
-n = 10
-seq = [0, 1]
+# n = 10
+# seq = [0, 1]
     
-    # We use a loop to calculate the rest
-    # We start from '2' because we already have index 0 and 1
-for i in range(2, n):
-        # Add the last two numbers together
-    next_number = seq[i-1] + seq[i-2]
-        # Put the new number at the end of our list
-    print(next_number)
-    seq.append(next_number)
-#print(seq)
+#     # We use a loop to calculate the rest
+#     # We start from '2' because we already have index 0 and 1
+# for i in range(2, n):
+#         # Add the last two numbers together
+#     next_number = seq[i-1] + seq[i-2]
+#         # Put the new number at the end of our list
+#     print(next_number)
+#     seq.append(next_number)
+# #print(seq)
