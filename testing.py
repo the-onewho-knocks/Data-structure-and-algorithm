@@ -115,3 +115,44 @@
 #     print(next_number)
 #     seq.append(next_number)
 # #print(seq)
+
+# largest = float("-inf")
+# s_largest = float("-inf")
+
+# for i in range(0 , len(nums)):
+#     if nums[i]> largest:
+#         s_largest = largest
+#         largest = nums[i]
+#     elif nums[i] > s_largest and nums[i] != largest:
+#         s_largest = nums[i]
+# print(s_largest)
+
+nums = [3, 2, 30, 45, 3, 50]
+largest = float("-inf")
+s_largest = float("-inf")
+t_largest = float("-inf")
+# for i in range(0 , len(nums)):
+#     if nums[i]>largest:
+#         s_largest = largest
+#         t_largest = s_largest
+#         largest = nums[i]
+#     elif nums[i]> s_largest and nums[i] != largest:
+#         s_largest = nums[i]
+#     elif nums[i]>t_largest and nums[i] != s_largest:
+#         t_largest = nums[i]
+# print(t_largest)
+
+for i in range(0 , len(nums)):
+    if nums[i] > largest:
+        largest = nums[i]
+print(largest)
+
+for i in range(0 , len(nums)):
+    if nums[i] > s_largest and nums[i] != largest:
+        s_largest = nums[i]
+print(s_largest)
+
+for i in range(0 , len(nums)):
+    if nums[i] > t_largest and nums[i] != largest and nums[i] != s_largest:
+        t_largest = nums[i]
+print(t_largest)
