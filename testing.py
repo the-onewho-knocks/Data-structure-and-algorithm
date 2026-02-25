@@ -163,4 +163,6 @@ nums = [3, 2, 30, 45, 3, 50]
 for i in range(0 , len(nums)-1):
     if nums[i] > nums[i+1]:
         print(False)
-print(True)
+print(True) 
+
+#ok here we go again
