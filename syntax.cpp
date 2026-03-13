@@ -9,6 +9,23 @@ int main(){
     //     cout << nums[i] << " ";
     // }
 
-    nums.push_back(4);  //append
-    nums.pop_back();    // remove from last
+   // nums.push_back(4);  //append
+    // nums.pop_back();    // remove from last
+
+    // cout<<nums.front();
+    // cout<<nums.back();
+
+    // for (int i = 0 ; i < nums.size() ; i++){
+    //     cout<<nums[i]<<" ";
+    // }
+    // for(int x : nums){
+    //     cout<<x<<" ";
+    // }
+
+    cout<< "\n";
+    //nums.insert(nums.begin()+2, 10);
+    for(int i = 0 ; i < nums.size() ; ++i){
+        cout<<nums[i]<<" ";
+    }
+
 }
