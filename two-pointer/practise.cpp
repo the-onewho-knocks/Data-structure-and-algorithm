@@ -3,21 +3,76 @@
 #include<vector>
 using namespace std;
 
-int main() {
-    vector<int> v = {-4,-1,0,3,10};
-    for (int &x : v) {
-    x *= x;
-    }
-    int left = 0;
-    int right = v.size()-1;
-    sort(v.begin() , v.end());
-    // while (left < right){
 
-    // }
-    for(int x : v){
-        cout<<x<<","<<endl;
+int main(){
+    vector<int> v = {1,1,2,2,3};
+    int slow = 0;
+    for(int fast = 1 ; fast < v.size() ; ++fast){
+        if(v[fast] != v[slow]){
+            slow++;
+            v[slow] = v[fast];
+        }
     }
+    for(int i : v){
+        cout<<i<<endl;
+    }
+
+
+//     int target = 6;
+//     int left = 0;
+//     int right = v.size()-1;
+//     vector<pair<int , int>> p ;
+//     while (left < right){
+//         int sum = v[left] + v[right];
+//         if(sum < target){
+//             left++;
+//         }
+//         else if(sum > target){
+//             right--;
+//         }
+//         else if(sum == target){
+//             p.push_back({v[left] , v[right]});
+//             left++;
+//             right--;
+//         }   
+//      }
+//      cout << p.size();
 }
+
+// int main() {
+//     // vector<int> v = {-4,-1,0,3,10};
+//     // for (int &x : v) {
+//     // x *= x;
+//     // }
+//     // int left = 0;
+//     // int right = v.size()-1;
+//     // sort(v.begin() , v.end());
+//     // // while (left < right){
+
+//     // // }
+//     // for(int x : v){
+//     //     cout<<x<<","<<endl;
+//     // }
+
+//     vector<int> v = { 1,2,3,4,6};
+//     int target = 6;
+//     int left = 0;
+//     int right = v.size()-1;
+//     while ( left < right ){
+//         int sum = v[left] + v[right];
+//         if(sum > target){
+//             right--;
+//         }
+//         else if(sum < target){
+//             left++;
+//         }
+//         else if(sum == target){
+//             cout<<"true"<<endl;
+//             return 0;
+//         }
+//     }
+//         cout << "false" << endl;
+// }
 
 // int main(){
 //     string s = "A man, a plan, a canal: Panama";
