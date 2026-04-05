@@ -7,8 +7,8 @@ public:
     int marks;
 
    Student(string name, int marks) {
-        name = name;
-        marks = marks;
+        this->name = name;
+        this->marks = marks;
     }
 
     void display() {
