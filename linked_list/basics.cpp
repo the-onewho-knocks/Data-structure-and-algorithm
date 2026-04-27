@@ -1,32 +1,30 @@
-#include <iostream>
-#include <list>
+#include <bits/stdc++.h>
 using namespace std;
+
+void it()
+{
+    list<int> l = {10, 20, 30};
+
+    auto it = l.begin();
+    advance(it, 1); // move iterator
+
+    l.insert(it, 15); // insert before 20
+    l.remove(20);     // removes all 20
+    cout << l.size();
+    cout << l.empty();
+}
 
 int main()
 {
-    list<int> l;                 // empty list
-    list<int> l1 = {1, 2, 3, 4}; // are the values of nodes
-    list<int> l2(5, 10);         // 5 elements nodes , each value is = 10
-
+    list<int> l;
     l.push_back(10);
-    l.push_front(5);
+    l.push_back(80);
+    l.push_front(23);
 
-    // // insert at a position
-    // auto it = l.begin();
-    // advance(it, 1);
-    // l.insert(it, 100);
-
-    // deletion
-    l.pop_back();
-    l.pop_front();
-
-    // erasing an element
-    // auto it = l.begin();
-    // advance(it, 1);
-    // l.erase(it); // delete element at position
-
-    for (auto it = l.begin(); it != l.end(); ++it)
+    for (int x : l)
     {
-        cout << *it << " ";
+        cout << x << " ";
     }
+
+    return 0;
 }
