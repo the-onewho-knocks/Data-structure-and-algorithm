@@ -6,4 +6,5 @@ for i in range(1 ,20):
         result.append(i)
     # if x // i != i:
     #     result.append(x // i)
+#fuck
 print(result)
