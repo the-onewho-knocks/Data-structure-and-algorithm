@@ -3,7 +3,6 @@ using namespace std;
 
 int main()
 {
-
     vector<int> nums = {2, 2, 1};
 
     unordered_map<int, int> mp;
