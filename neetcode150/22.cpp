@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int n = 100;
+    int n = 1;
 
     string s = "()";
 
