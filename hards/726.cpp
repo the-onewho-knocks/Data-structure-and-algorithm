@@ -1,5 +1,5 @@
-//not solved
-#include<bits/stdc++.h>
+// not solved
+#include <bits/stdc++.h>
 using namespace std;
 /*
 Example 1:
@@ -21,67 +21,88 @@ Output: "K4N2O14S4"
 Explanation: The count of elements are {'K': 4, 'N': 2, 'O': 14, 'S': 4}.
 
 */
-class Solution{
-    public:
-    string countOfAtoms(string formula){
-        stack<map<string , int>> st;
+class Solution
+{
+public:
+    string countOfAtoms(string formula)
+    {
+        stack<map<string, int>> st;
         st.push({});
 
         int i = 0;
         int n = formula.size();
 
-        while(i < n){
-            if(formula[i] == '('){
+        while (i < n)
+        {
+            if (formula[i] == '(')
+            {
                 st.push({});
                 i++;
             }
-            else if(formula[i]== ')'){
+            else if (formula[i] == ')')
+            {
                 i++;
 
                 int num = 0;
-                while(i < n && isdigit(formula[i])){
+                while (i < n && isdigit(formula[i]))
+                {
                     num = num * 10 + (formula[i] - '0');
                     i++;
                 }
 
-                if(num == 0) num == 1;
+                if (num == 0)
+                    num = 1;
 
                 auto cur = st.top();
                 st.pop();
 
-                for(auto &[atom , count] : cur){
+                for (auto &[atom, count] : cur)
+                {
                     st.top()[atom] += count * num;
                 }
             }
-            else{
+            else
+            {
                 string atom;
                 atom += formula[i++];
 
-                while(i < n && islower(formula[i])){
+                while (i < n && islower(formula[i]))
+                {
                     atom += formula[i++];
                 }
 
                 int num = 0;
-                while(i < n && isdigit(formula[i])){
+                while (i < n && isdigit(formula[i]))
+                {
                     num = num * 10 + (formula[i] - '0');
                     i++;
                 }
 
-                if(num == 0 ) num = 1;
+                if (num == 0)
+                    num = 1;
 
                 st.top()[atom] += num;
-
             }
-
-            string ans;
-            for(auto &[atom , count] : st.top()){
-                ans += atom;
-                if(count > 1){
-                    ans += to_string(count);
-                }
-            }
-
-            return ans;
         }
+
+        string ans;
+        for (auto &[atom, count] : st.top())
+        {
+            ans += atom;
+            if (count > 1)
+            {
+                ans += to_string(count);
+            }
+        }
+
+        return ans;
     }
 };
+
+int main()
+{
+    Solution sol;
+    string formula = "K4(ON(SO3)2)2";
+    cout << sol.countOfAtoms(formula) << endl;
+    return 0;
+}
